@@ -1,16 +1,58 @@
+@charset "UTF-8";
 @font-face {
   font-family: "MinecraftTen";
   src: url("../fonts/MinecraftTen-VGORe.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "SgaSmoothRegular";
+  src: url("../fonts/SgaSmoothRegular-DO0Y3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   font-size: 16px;
-  /* 1rem = 16px */
+  overflow: hidden;
 }
 
 body {
   cursor: url(../images/minecraft-enchanted-iron-pickaxes-cursor.png), default !important;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "MinecraftTen", sans-serif;
+}
+
+a svg g g {
+  fill: #000000;
+}
+
+a:hover {
+  transition: 0.5s ease-in-out;
+  color: #FFFFFF !important;
+}
+
+a:hover svg g g {
+  transition: 0.5s ease-in-out;
+  fill: white;
+}
+
+.custom-cursor,
+.custom-cursor a,
+.custom-cursor button,
+.custom-cursor input,
+.custom-cursor select,
+.custom-cursor textarea {
+  cursor: url("../images/minecraft-enchanted-iron-pickaxes-pointer.png"), auto;
+}
+
+.custom-cursor-active,
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active input,
+.custom-cursor-active select,
+.custom-cursor-active textarea {
+  cursor: url("../images/minecraft-enchanted-iron-pickaxes-cursor.png"), auto;
 }
 
 section.main-page-section {
@@ -27,8 +69,45 @@ section.main-page-section {
 }
 
 .img-dark-dimension {
-  max-width: 40rem;
-  margin-bottom: 7rem;
+  position: relative;
+  z-index: 102;
+  max-width: 65vw;
+  transform: translatey(0px);
+  animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(5px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+h1 span {
+  display: none;
+}
+
+h2 {
+  box-sizing: border-box;
+  padding: 20px 20px 0 20px;
+  width: 35vw;
+  text-align: center;
+  text-wrap: nowrap;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  margin-bottom: 5vh;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: "SgaSmoothRegular";
+  transition: 0.5s ease-in-out;
+}
+h2:hover {
+  font-family: "MinecraftTen";
+  letter-spacing: 0.25rem;
+  font-size: 1em;
 }
 
 .img-logo-main {
@@ -40,23 +119,75 @@ section.main-page-section {
 }
 
 .nav-bar-main-page {
-  background-color: #e8c4b4;
+  background-color: #fabb9f;
 }
 
 .button-profile {
-  font-family: "MinecraftTen", sans-serif;
-  font-size: 16px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-wrap: nowrap;
+  align-items: center;
+}
+.button-profile svg {
+  height: 70%;
+}
+.button-profile span {
+  text-align: center;
+}
+
+.container1_additional-border {
+  border-left: 1rem solid #fabb9f;
+  border-right: 1rem solid #fabb9f;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container1 {
-  background-color: #1c0c1c;
-  border-left: 22px solid #e8c4b4;
-  border-right: 22px solid #e8c4b4;
+  background-image: url("../images/artwork_screen2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px ridge black;
 }
 
+.container1_additional-border::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bf4d68fb166d4adf291221e42fb94edc.png");
+  animation: rain 0.19s ease-in infinite;
+}
+
+.glass-background {
+  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px); /* Ефект розмиття */
+}
+
+@keyframes rain {
+  0% {
+    background-position: 10 0;
+  }
+  100% {
+    background-position: 20% 80%;
+  }
+}
 .grid-container1 {
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   padding-bottom: 3rem;
 }
 
@@ -68,30 +199,311 @@ section.main-page-section {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   color: #e4e8fd;
-  font-family: "MinecraftTen", sans-serif;
   font-size: 24px;
 }
 
-.neon-border {
-  border: 2px solid white;
-  position: relative;
-  border-radius: 4px;
+#bottomCloud {
+  position: absolute;
+  bottom: 0;
+  animation: windBlow2 24s infinite ease-in-out;
+  z-index: 101;
+  height: 26vh;
+  width: 100vw;
 }
-.neon-border:before, .neon-border:after {
-  content: "";
+
+#bottomCloud2 {
+  position: absolute;
+  bottom: 0;
+  animation: windBlow4 24s infinite ease-in-out;
+  z-index: 101;
+  height: 15vh;
+  width: 100vw;
+}
+
+#topCloud {
+  position: absolute;
+  top: 0;
+  animation: windBlow1 28s infinite linear;
+  z-index: 101;
+  height: 12vh;
+  width: 100vw;
+}
+
+#topCloud2 {
+  position: absolute;
+  top: 0;
+  animation: windBlow3 28s infinite linear;
+  z-index: 101;
+  height: 12vh;
+  width: 100vw;
+}
+
+@keyframes windBlow {
+  0% {
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes windBlow1 {
+  0% {
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes windBlow3 {
+  0% {
+    transform: translateX(-100vw);
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  76% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+@keyframes windBlow2 {
+  0% {
+    transform: translateX(0);
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  52% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#img-logo-main {
+  position: relative;
+  z-index: 100;
+  width: 7rem;
+}
+
+@keyframes windBlow4 {
+  0% {
+    transform: translateX(-100vw);
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  76% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  77% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+#weatherAnimation {
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.myCanvas {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 100;
+  transform: translateX(50%, 50%);
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+@keyframes flash {
+  0% {
+    background-color: rgba(255, 182, 193, 0);
+  }
+  10% {
+    background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+  }
+  90% {
+    background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+  }
+  100% {
+    background-color: rgba(255, 182, 193, 0);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+.glowing-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  border: 2px solid transparent;
-  border-radius: inherit;
-  pointer-events: none;
-  animation: neon-border-animation 2s infinite alternate;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid rgba(65, 220, 255, 0.797);
+  position: relative;
+  overflow: hidden;
+  z-index: 102;
+  box-shadow: 0 0 15px rgba(65, 220, 255, 0.594);
+  transition: box-shadow 0.4s ease-in-out;
 }
-.neon-border:before {
-  box-shadow: 0 0 10px #e1e3ff, 0 0 6px #e1e3ff, 0 0 12px #e1e3ff, 0 0 16px #e1e3ff;
+.glowing-button p {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  position: relative;
+  z-index: 102;
 }
-.neon-border:after {
-  box-shadow: 0 0 5px #e1e3ff, 0 0 7px #e1e3ff, 0 0 11px #e1e3ff, 0 0 14px #e1e3ff;
+
+.glowing-button::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -175%;
+  left: 20%;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(120deg, rgba(65, 220, 255, 0.5), rgba(65, 220, 255, 0.1), rgba(65, 220, 255, 0.5));
+  z-index: 101;
+  transform: rotate(45deg);
+  animation: animate 8s linear infinite;
+}
+
+.glowing-button span {
+  z-index: 2;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin: 0 10px;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.glowing-button span:first-child::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  transition: top 0.4s ease-in-out;
+}
+
+.glowing-button span:first-child::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  transition: top 0.4s ease-in-out;
+}
+
+.glowing-button:hover {
+  box-shadow: 0 0 45px rgba(65, 220, 255, 0.9);
+}
+
+.glowing-button:hover span {
+  background-color: #04b6d6;
+}
+
+.glowing-button:hover span:first-child::before {
+  top: -12px;
+}
+
+.glowing-button:hover span:first-child::after {
+  top: 12px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(50%, 50%);
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+@media screen and (max-width: 680px) {
+  .grid-container1 {
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+  }
+  .glowing-button {
+    height: 48px;
+    font-size: 1em;
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    width: 65vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  h2 {
+    width: 100vw;
+  }
 }/*# sourceMappingURL=styles.css.map */

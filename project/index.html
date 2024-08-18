@@ -7,41 +7,95 @@
 
     <title>Dark Dimension</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-
+    <link rel="stylesheet" href="../assets/scss/styles.css">
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
-    <section class="main-page-section">
-        <img src="../assets/images/DarkDimension.png" alt="" class="img-dark-dimension">
-        
+    <section id="weatherAnimation" class="main-page-section">
+        <img id="topCloud"
+            src="../assets/images/Illustrative_Albedo_Digital_artwork_featuring_a_surreal_and_fa_01.png"
+            alt="top cloud">
+            <img id="topCloud2"
+            src="../assets/images/Illustrative_Albedo_Digital_artwork_featuring_a_surreal_and_fa_02.png"
+            alt="top cloud">
+        <h1><span>Dark Dimension</span><img src="../assets/images/DarkDimension.png" alt="" class="img-dark-dimension">
+        </h1>
+        <h2>Minecraft Server</h2>
         <div class="container1 flex flex-col items-center">
             <nav class="nav-bar-main-page w-full flex">
                 <!-- Menu -->
                 <div class="w-full flex justify-end space-x-3 px-4 py-1 ">
-                    <img src="../assets/images/account-icon.svg" alt="" class="img-profile-icon">
-                    <a href="#" class="button-profile hover:text-blue-500">Personal profile</a>
+
+                    <a href="#" class="button-profile hover:text-blue-500">
+                        <svg class="img-profile-icon" viewBox="0 0 20 20" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                            <title>emoji_minecraft_square [#409]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs>
+
+                            </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Dribbble-Light-Preview" transform="translate(-420.000000, -6319.000000)">
+                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                        <path
+                                            d="M376,6169 L380,6169 L380,6165 L376,6165 L376,6169 Z M368,6169 L372,6169 L372,6165 L368,6165 L368,6169 Z M382,6177 L378,6177 L378,6171 L376,6171 L376,6169 L372,6169 L372,6171 L370,6171 L370,6177 L366,6177 L366,6161 L382,6161 L382,6177 Z M372,6177 L376,6177 L376,6175 L372,6175 L372,6177 Z M364,6179 L384,6179 L384,6159 L364,6159 L364,6179 Z"
+                                            id="emoji_minecraft_square-[#409]">
+
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <span>Personal profile</span>
+                    </a>
                 </div>
             </nav>
+            <div class="container1_additional-border">
 
-            <img src="../assets/images/tempLogo1.png" alt="" class="img-logo-main m-10">
 
-            <div class="grid-container1 grid gap-x-20 gap-y-8 grid-cols-2 m-10">
-                <div class="grid-item-div neon-border">
-                    News
+                <img id="img-logo-main" src="../assets/images/Default_Create_a_mesmerizing_logo_for_the_Dark_Dimension_Minec_2_619309b6-0fbc-44cf-8e53-6d486ed4db0f_0.png" alt="" class="img-logo-main">
+
+                <div class="grid-container1 grid gap-x-20 gap-y-8 grid-cols-2">
+                    <a href="#">
+                        <div class="glowing-button grid-item-div glass-background">
+                            <span></span>
+                            <p>News</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="glowing-button grid-item-div glass-background">
+                            <span></span>
+                            <p>Rules</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="glowing-button grid-item-div glass-background">
+                            <span></span>
+                            <p>Donate</p>
+                            <span></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="glowing-button grid-item-div glass-background">
+                            <span></span>
+                            <p>Forum</p>
+                            <span></span>
+                        </div>
+                    </a>
                 </div>
-                <div class="grid-item-div neon-border">
-                    Rules
-                </div>
-                <div class="grid-item-div neon-border">
-                    Donate
-                </div>
-                <div class="grid-item-div neon-border">
-                    Forum
-                </div>
+
             </div>
-
         </div>
+        <img id="bottomCloud"
+            src="../assets/images/Graphic_Design_Digital_artwork_featuring_a_surreal_and_fantast_01.png"
+            alt="bottom cloud">
+            <img id="bottomCloud2"
+            src="../assets/images/Graphic_Design_Digital_artwork_featuring_a_surreal_and_fantast_02.png"
+            alt="bottom cloud">
     </section>
 </body>
 
