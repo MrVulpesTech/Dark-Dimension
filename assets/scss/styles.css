@@ -1,16 +1,19 @@
 @charset "UTF-8";
+
 @font-face {
   font-family: "MinecraftTen";
   src: url("../fonts/MinecraftTen-VGORe.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "SgaSmoothRegular";
   src: url("../fonts/SgaSmoothRegular-DO0Y3.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
 html {
   font-size: 16px;
   overflow: hidden;
@@ -80,13 +83,16 @@ section.main-page-section {
   0% {
     transform: translatey(0px);
   }
+
   50% {
     transform: translatey(5px);
   }
+
   100% {
     transform: translatey(0px);
   }
 }
+
 h1 span {
   display: none;
 }
@@ -104,6 +110,7 @@ h2 {
   font-family: "SgaSmoothRegular";
   transition: 0.5s ease-in-out;
 }
+
 h2:hover {
   font-family: "MinecraftTen";
   letter-spacing: 0.25rem;
@@ -130,9 +137,11 @@ h2:hover {
   text-wrap: nowrap;
   align-items: center;
 }
+
 .button-profile svg {
   height: 70%;
 }
+
 .button-profile span {
   text-align: center;
 }
@@ -172,19 +181,23 @@ h2:hover {
 }
 
 .glass-background {
-  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+  background: rgba(0, 0, 0, 0.5);
+  /* Напівпрозорий чорний фон */
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px); /* Ефект розмиття */
+  backdrop-filter: blur(2px);
+  /* Ефект розмиття */
 }
 
 @keyframes rain {
   0% {
     background-position: 10 0;
   }
+
   100% {
     background-position: 20% 80%;
   }
 }
+
 .grid-container1 {
   width: 70%;
   display: grid;
@@ -254,90 +267,114 @@ h2:hover {
   0% {
     transform: translateX(0);
   }
+
   49% {
     opacity: 1;
   }
+
   50% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   51% {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   52% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 @keyframes windBlow1 {
   0% {
     transform: translateX(0);
   }
+
   49% {
     opacity: 1;
   }
+
   50% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   51% {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   52% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 @keyframes windBlow3 {
   0% {
     transform: translateX(-100vw);
   }
+
   74% {
     opacity: 1;
   }
+
   75% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   76% {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   77% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(-100vw);
   }
 }
+
 @keyframes windBlow2 {
   0% {
     transform: translateX(0);
   }
+
   49% {
     opacity: 1;
   }
+
   50% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   51% {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   52% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 #img-logo-main {
   position: relative;
   z-index: 100;
@@ -348,24 +385,30 @@ h2:hover {
   0% {
     transform: translateX(-100vw);
   }
+
   74% {
     opacity: 1;
   }
+
   75% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   76% {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   77% {
     opacity: 1;
   }
+
   100% {
     transform: translateX(-100vw);
   }
 }
+
 #weatherAnimation {
   height: 100vh;
   position: relative;
@@ -386,26 +429,41 @@ h2:hover {
   0% {
     background-color: rgba(255, 182, 193, 0);
   }
+
   10% {
-    background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+    background-color: rgba(255, 182, 193, 0.1);
+    /* Зменшено яскравість */
   }
+
   90% {
-    background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+    background-color: rgba(255, 182, 193, 0.1);
+    /* Зменшено яскравість */
   }
+
   100% {
     background-color: rgba(255, 182, 193, 0);
   }
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 100%;
   }
+
   100% {
     opacity: 0%;
   }
 }
+
+.language-button-container {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
 .glowing-button {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -418,6 +476,7 @@ h2:hover {
   box-shadow: 0 0 15px rgba(65, 220, 255, 0.594);
   transition: box-shadow 0.4s ease-in-out;
 }
+
 .glowing-button p {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   position: relative;
@@ -441,14 +500,14 @@ h2:hover {
 .side-content-left {
   display: flex;
   justify-content: flex-start;
-  align-items: center;    
+  align-items: center;
   font-family: "SgaSmoothRegular";
   font-size: 1rem;
 
   position: absolute;
   top: 0;
   bottom: 0;
-  padding-left: 0.5rem;
+  padding-left: 0.8rem;
 
   left: 0;
 }
@@ -456,32 +515,75 @@ h2:hover {
 .side-content-right {
   display: flex;
   justify-content: flex-end;
-  align-items: center;    
+  align-items: center;
   font-family: "SgaSmoothRegular";
   font-size: 1rem;
 
   position: absolute;
   top: 0;
   bottom: 0;
-  padding-right: 0.5rem;
+  padding-right: 0.8rem;
 
   right: 0;
 }
 
-.neon-runes-text {
-  color: #fff; /* Білий колір тексту */
-  text-shadow: 
-    0 0 5px rgba(255, 255, 0, 0.8),   /* Легка зовнішня тінь */
-    0 0 10px rgba(255, 255, 0, 0.6),  /* Помірна тінь */
-    0 0 15px rgba(255, 255, 0, 0.4);  /* Розсіяне світіння */
-  transition: text-shadow 0.3s ease; /* Плавний перехід для ефекту */
+.side-content-left-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "SgaSmoothRegular";
+  font-size: 1rem;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 0.8rem;
 }
 
-.glowing-button:hover .neon-runes-text {
-  text-shadow: 
-    0 0 10px rgba(255, 255, 0, 1),   /* Посилене світіння */
-    0 0 20px rgba(255, 255, 0, 0.8), 
-    0 0 30px rgba(255, 255, 0, 0.6); 
+.side-content-right-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "SgaSmoothRegular";
+  font-size: 1rem;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-right: 0.8rem;
+}
+
+.runes-transition-2:hover .neon-runes-text-2 {
+  opacity: 0;
+}
+
+.neon-runes-text-2 {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.neon-runes-text {
+  color: #fff;
+  /* Білий колір тексту */
+  text-shadow:
+    0 0 5px rgba(255, 255, 0, 0.8),
+    /* Легка зовнішня тінь */
+    0 0 10px rgba(255, 255, 0, 0.6),
+    /* Помірна тінь */
+    0 0 15px rgba(255, 255, 0, 0.4);
+  /* Розсіяне світіння */
+  transition: text-shadow 0.3s ease;
+  /* Плавний перехід для ефекту */
+}
+
+.runes-transition-1:hover .neon-runes-text {
+  text-shadow:
+    0 0 10px rgba(255, 255, 0, 1),
+    /* Посилене світіння */
+    0 0 20px rgba(255, 255, 0, 0.8),
+    0 0 30px rgba(255, 255, 0, 0.6);
 }
 
 
@@ -493,30 +595,38 @@ h2:hover {
   0% {
     transform: rotate(45deg) translate(0, 0);
   }
+
   50% {
     transform: rotate(45deg) translate(50%, 50%);
   }
+
   100% {
     transform: rotate(45deg) translate(0, 0);
   }
 }
+
 @media screen and (max-width: 680px) {
   .grid-container1 {
     display: flex;
     gap: 2vh;
     flex-direction: column;
   }
+
   .glowing-button {
     height: 48px;
     font-size: 1em;
     padding-bottom: 0.5rem;
   }
+
   h2 {
     width: 65vw;
   }
 }
+
 @media screen and (max-width: 400px) {
   h2 {
     width: 100vw;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
