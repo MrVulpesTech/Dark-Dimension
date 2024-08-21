@@ -24,13 +24,13 @@ body {
     font-family: 'MinecraftTen', sans-serif;
 }
 
-a svg g g{
+a svg g g {
     fill: #000000;
 }
 
 a:hover {
     transition: 0.5s ease-in-out;
-   color: #FFFFFF !important;
+    color: #FFFFFF !important;
 }
 
 a:hover svg g g {
@@ -39,20 +39,20 @@ a:hover svg g g {
 }
 
 
-.custom-cursor, 
-.custom-cursor a, 
-.custom-cursor button, 
-.custom-cursor input, 
-.custom-cursor select, 
+.custom-cursor,
+.custom-cursor a,
+.custom-cursor button,
+.custom-cursor input,
+.custom-cursor select,
 .custom-cursor textarea {
     cursor: url('../images/minecraft-enchanted-iron-pickaxes-pointer.png'), auto;
 }
 
-.custom-cursor-active, 
-.custom-cursor-active a, 
-.custom-cursor-active button, 
-.custom-cursor-active input, 
-.custom-cursor-active select, 
+.custom-cursor-active,
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active input,
+.custom-cursor-active select,
 .custom-cursor-active textarea {
     cursor: url('../images/minecraft-enchanted-iron-pickaxes-cursor.png'), auto;
 }
@@ -77,19 +77,21 @@ section.main-page-section {
     z-index: 102;
     max-width: 65vw;
     transform: translatey(0px);
-	animation: float 12s ease-in-out infinite;
+    animation: float 12s ease-in-out infinite;
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+    }
+
     50% {
-		transform: translatey(5px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+        transform: translatey(5px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 h1 span {
@@ -108,10 +110,11 @@ h2 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: "SgaSmoothRegular";
     transition: 0.5s ease-in-out;
+
     &:hover {
-    font-family: 'MinecraftTen';
-    letter-spacing: 0.25rem;
-    font-size: 1em;
+        font-family: 'MinecraftTen';
+        letter-spacing: 0.25rem;
+        font-size: 1em;
     }
 }
 
@@ -134,9 +137,11 @@ h2 {
     gap: 1rem;
     text-wrap: nowrap;
     align-items: center;
+
     svg {
         height: 70%;
     }
+
     span {
         text-align: center;
     }
@@ -165,7 +170,7 @@ h2 {
     border: 2px ridge black;
 }
 
-.container1_additional-border::before{
+.container1_additional-border::before {
     content: '';
     position: absolute;
     top: 0%;
@@ -174,21 +179,33 @@ h2 {
     height: 100%;
     background-image: url('../images/bf4d68fb166d4adf291221e42fb94edc.png');
     animation: rain 0.19s ease-in infinite;
- }
- .glass-background {
-    background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
-    backdrop-filter: blur(2px); /* Ефект розмиття */
 }
- @keyframes rain{
-    0%{
-       background-position: 10 0;
+
+.glass-background {
+    background: rgba(0, 0, 0, 0.5);
+    /* Напівпрозорий чорний фон */
+    backdrop-filter: blur(2px);
+    /* Ефект розмиття */
+}
+
+@keyframes rain {
+    0% {
+        background-position: 10 0;
     }
-    100%{
-       background-position: 20% 80%;
+
+    100% {
+        background-position: 20% 80%;
     }
- }
+}
 
 .grid-container1 {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 2rem;
+    column-gap: 3rem;
+
     padding-left: 3rem;
     padding-right: 3rem;
     padding-bottom: 3rem;
@@ -196,7 +213,7 @@ h2 {
 
 .grid-item-div {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
 
     padding-top: 0.5rem;
     padding-bottom: 1rem;
@@ -205,6 +222,10 @@ h2 {
 
     color: #e4e8fd;
     font-size: 24px;
+}
+
+.button-text-with-hover {
+    transition: all 0.5s ease;
 }
 
 #bottomCloud {
@@ -244,24 +265,30 @@ h2 {
     width: 100vw;
 
 }
+
 @keyframes windBlow {
     0% {
         transform: translateX(0);
     }
+
     49% {
         opacity: 1;
     }
+
     50% {
         transform: translateX(100vw);
         opacity: 0;
     }
+
     51% {
         transform: translateX(-100vw);
         opacity: 0;
     }
+
     52% {
         opacity: 1;
     }
+
     100% {
         transform: translateX(0);
     }
@@ -271,20 +298,25 @@ h2 {
     0% {
         transform: translateX(0);
     }
+
     49% {
         opacity: 1;
     }
+
     50% {
         transform: translateX(100vw);
         opacity: 0;
     }
+
     51% {
         transform: translateX(-100vw);
         opacity: 0;
     }
+
     52% {
         opacity: 1;
     }
+
     100% {
         transform: translateX(0);
     }
@@ -294,20 +326,25 @@ h2 {
     0% {
         transform: translateX(-100vw);
     }
+
     74% {
         opacity: 1;
     }
+
     75% {
         transform: translateX(100vw);
         opacity: 0;
     }
+
     76% {
         transform: translateX(-100vw);
         opacity: 0;
     }
+
     77% {
         opacity: 1;
     }
+
     100% {
         transform: translateX(-100vw);
     }
@@ -318,20 +355,25 @@ h2 {
     0% {
         transform: translateX(0);
     }
+
     49% {
         opacity: 1;
     }
+
     50% {
         transform: translateX(100vw);
         opacity: 0;
     }
+
     51% {
         transform: translateX(-100vw);
         opacity: 0;
     }
+
     52% {
         opacity: 1;
     }
+
     100% {
         transform: translateX(0);
     }
@@ -347,20 +389,25 @@ h2 {
     0% {
         transform: translateX(-100vw);
     }
+
     74% {
         opacity: 1;
     }
+
     75% {
         transform: translateX(100vw);
         opacity: 0;
     }
+
     76% {
         transform: translateX(-100vw);
         opacity: 0;
     }
+
     77% {
         opacity: 1;
     }
+
     100% {
         transform: translateX(-100vw);
     }
@@ -388,12 +435,17 @@ h2 {
     0% {
         background-color: rgba(255, 182, 193, 0);
     }
+
     10% {
-        background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+        background-color: rgba(255, 182, 193, 0.1);
+        /* Зменшено яскравість */
     }
+
     90% {
-        background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+        background-color: rgba(255, 182, 193, 0.1);
+        /* Зменшено яскравість */
     }
+
     100% {
         background-color: rgba(255, 182, 193, 0);
     }
@@ -404,6 +456,7 @@ h2 {
     0% {
         opacity: 100%;
     }
+
     100% {
         opacity: 0%;
     }
@@ -428,6 +481,7 @@ h2 {
         position: relative;
         z-index: 102;
     }
+
 }
 
 .glowing-button::before {
@@ -444,54 +498,30 @@ h2 {
     animation: animate 8s linear infinite;
 }
 
-.glowing-button span {
-    z-index: 2;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-    margin: 0 10px;
-    transition: background-color 0.4s ease-in-out;
-}
-
-.glowing-button span:first-child::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
+.side-content-left {
+    font-family: "SgaSmoothRegular";
+  
     position: absolute;
-    top: -8px;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+  
     left: 0;
-    transition: top 0.4s ease-in-out;
-}
+  }
 
-.glowing-button span:first-child::after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 8px;
-    left: 0;
-    transition: top 0.4s ease-in-out;
+.side-content-right {
+  font-family: "SgaSmoothRegular";
+  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+
+  right: 0;
 }
 
 .glowing-button:hover {
     box-shadow: 0 0 45px rgba(65, 220, 255, 0.9);
-}
-
-.glowing-button:hover span {
-    background-color: #04b6d6;
-}
-
-.glowing-button:hover span:first-child::before {
-    top: -12px;
-}
-
-.glowing-button:hover span:first-child::after {
-    top: 12px;
 }
 
 @keyframes animate {
@@ -514,19 +544,20 @@ h2 {
         gap: 2vh;
         flex-direction: column;
     }
+
     .glowing-button {
         height: 48px;
         font-size: 1em;
         padding-bottom: 0.5rem;
     }
+
     h2 {
         width: 65vw;
     }
-  }
+}
 
-  @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     h2 {
         width: 100vw;
     }
-  }
-  
+}

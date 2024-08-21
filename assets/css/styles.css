@@ -172,9 +172,11 @@ h2:hover {
 }
 
 .glass-background {
-  background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+  background: rgba(0, 0, 0, 0.5);
+  /* Напівпрозорий чорний фон */
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px); /* Ефект розмиття */
+          backdrop-filter: blur(2px);
+  /* Ефект розмиття */
 }
 
 @keyframes rain {
@@ -191,8 +193,8 @@ h2:hover {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   row-gap: 2rem;
-  column-gap: 3rem;
-
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 3rem;
@@ -201,7 +203,6 @@ h2:hover {
 .grid-item-div {
   display: flex;
   justify-content: center !important;
-
   padding-top: 0.5rem;
   padding-bottom: 1rem;
   padding-left: 1.5rem;
@@ -387,10 +388,12 @@ h2:hover {
     background-color: rgba(255, 182, 193, 0);
   }
   10% {
-    background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+    background-color: rgba(255, 182, 193, 0.1);
+    /* Зменшено яскравість */
   }
   90% {
-    background-color: rgba(255, 182, 193, 0.1); /* Зменшено яскравість */
+    background-color: rgba(255, 182, 193, 0.1);
+    /* Зменшено яскравість */
   }
   100% {
     background-color: rgba(255, 182, 193, 0);
@@ -426,7 +429,7 @@ h2:hover {
 
 .glowing-button::before {
   display: none;
-  content: '';
+  content: "";
   position: absolute;
   top: -175%;
   left: 20%;
@@ -439,51 +442,22 @@ h2:hover {
 }
 
 .side-content-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;    
   font-family: "SgaSmoothRegular";
-  font-size: 1rem;
-
   position: absolute;
   top: 0;
   bottom: 0;
-  padding-left: 0.5rem;
-
+  width: 40px;
   left: 0;
 }
 
 .side-content-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;    
   font-family: "SgaSmoothRegular";
-  font-size: 1rem;
-
   position: absolute;
   top: 0;
   bottom: 0;
-  padding-right: 0.5rem;
-
+  width: 40px;
   right: 0;
 }
-
-.neon-runes-text {
-  color: #fff; /* Білий колір тексту */
-  text-shadow: 
-    0 0 5px rgba(255, 255, 0, 0.8),   /* Легка зовнішня тінь */
-    0 0 10px rgba(255, 255, 0, 0.6),  /* Помірна тінь */
-    0 0 15px rgba(255, 255, 0, 0.4);  /* Розсіяне світіння */
-  transition: text-shadow 0.3s ease; /* Плавний перехід для ефекту */
-}
-
-.glowing-button:hover .neon-runes-text {
-  text-shadow: 
-    0 0 10px rgba(255, 255, 0, 1),   /* Посилене світіння */
-    0 0 20px rgba(255, 255, 0, 0.8), 
-    0 0 30px rgba(255, 255, 0, 0.6); 
-}
-
 
 .glowing-button:hover {
   box-shadow: 0 0 45px rgba(65, 220, 255, 0.9);
