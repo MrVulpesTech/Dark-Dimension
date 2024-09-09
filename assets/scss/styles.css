@@ -1,16 +1,20 @@
+@charset "UTF-8";
+
 @font-face {
-  font-family: "MinecraftTen", sans-serif;
+  font-family: "MinecraftTen";
   src: url("../fonts/MinecraftTen-VGORe.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "SgaSmoothRegular";
   src: url("../fonts/SgaSmoothRegular-DO0Y3.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-html, body {
+
+html {
   font-size: 16px;
   overflow: hidden;
 }
@@ -18,61 +22,87 @@ html, body {
 body {
   cursor: url(../images/minecraft-enchanted-iron-pickaxes-cursor.png), default !important;
   height: 100vh;
+  overflow: hidden;
   font-family: "MinecraftTen", sans-serif;
 }
 
-a svg g g, a:hover svg g g {
+a svg g g {
   fill: #000000;
-  transition: 0.5s ease-in-out;
 }
 
 a:hover {
+  transition: 0.5s ease-in-out;
   color: #FFFFFF !important;
 }
 
+a:hover svg g g {
+  transition: 0.5s ease-in-out;
+  fill: white;
+}
+
 .custom-cursor,
-.custom-cursor-active {
+.custom-cursor a,
+.custom-cursor button,
+.custom-cursor input,
+.custom-cursor select,
+.custom-cursor textarea {
   cursor: url("../images/minecraft-enchanted-iron-pickaxes-pointer.png"), auto;
 }
 
-.custom-cursor-active {
+.custom-cursor-active,
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active input,
+.custom-cursor-active select,
+.custom-cursor-active textarea {
   cursor: url("../images/minecraft-enchanted-iron-pickaxes-cursor.png"), auto;
 }
 
 section.main-page-section {
-  background: black url(../images/artwork.png) center/cover no-repeat;
+  background-image: url(../images/artwork.png);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .img-dark-dimension {
   position: relative;
   z-index: 102;
   max-width: 65vw;
+  transform: translatey(0px);
   animation: float 12s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translatey(0);
+  0% {
+    transform: translatey(0px);
   }
+
   50% {
     transform: translatey(5px);
   }
+
+  100% {
+    transform: translatey(0px);
+  }
 }
+
 h1 span {
   display: none;
 }
 
 h2 {
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   width: 35vw;
   text-align: center;
-  white-space: nowrap;
+  text-wrap: nowrap;
   color: #FFFFFF;
   font-size: 0.8em;
   margin-bottom: 5vh;
@@ -80,14 +110,11 @@ h2 {
   font-family: "SgaSmoothRegular";
   transition: 0.5s ease-in-out;
 }
+
 h2:hover {
-  font-family: "MinecraftTen", sans-serif;
+  font-family: "MinecraftTen";
   letter-spacing: 0.25rem;
   font-size: 1em;
-}
-
-.img-logo-main, .img-profile-icon {
-  max-width: 16rem;
 }
 
 .img-profile-icon {
@@ -103,14 +130,19 @@ h2:hover {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  white-space: nowrap;
+  text-wrap: nowrap;
   align-items: center;
 }
+
 .button-profile svg {
   height: 70%;
 }
+
 .button-profile span {
   text-align: center;
+}
+.button-profile:hover {
+  color: aqua;
 }
 
 .container1_additional-border {
@@ -126,133 +158,258 @@ h2:hover {
 }
 
 .container1 {
-  background: url("../images/artwork_screen2.png") center/cover no-repeat;
+  background-image: url("../images/artwork_screen2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 80%;
   height: 100%;
   overflow: hidden;
   border: 2px ridge black;
+  z-index: 80;
 }
 
 .container1_additional-border::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: 0%;
   width: 100%;
   height: 100%;
-  background-image: url("../images/bf4d68fb166d4adf291221e42fb94edc.png");
-  animation: rain 0.19s ease-in infinite;
+  background-image: url("../images/rain.png");
+  animation: rain 0.25s ease-in infinite;
+  will-change: transform, opacity; /* Оптимізація для плавних змін */
 }
 
 .glass-background {
   background: rgba(0, 0, 0, 0.5);
+  /* Напівпрозорий чорний фон */
   -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  /* Ефект розмиття */
 }
 
 @keyframes rain {
   0% {
     background-position: 10 0;
   }
+
   100% {
     background-position: 20% 80%;
   }
 }
+
 .grid-container1 {
   width: 70%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
-  gap: 2rem 3rem;
-  padding: 0 3rem 3rem;
+  row-gap: 2rem;
+  column-gap: 3rem;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem
 }
 
 .grid-item-div {
   display: flex;
   justify-content: center !important;
-  padding: 0.5rem 1.5rem 1rem;
+
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   color: #e4e8fd;
   font-size: 24px;
 }
 
-.button-text-with-hover, .glowing-button {
+.button-text-with-hover {
   transition: all 0.5s ease;
 }
 
-#bottomCloud, #bottomCloud2 {
+#bottomCloud {
   position: absolute;
   bottom: 0;
-  z-index: 101;
-  width: 100vw;
   animation: windBlow2 24s infinite ease-in-out;
-}
-
-#bottomCloud {
-  height: 22vh;
+  z-index: 101;
+  height: 26vh;
+  width: 100vw;
 }
 
 #bottomCloud2 {
-  height: 13vh;
-}
-
-.language-button-container {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-}
-
-#topCloud, #topCloud2 {
   position: absolute;
-  top: 0;
+  bottom: 0;
+  animation: windBlow4 24s infinite ease-in-out;
   z-index: 101;
+  height: 15vh;
   width: 100vw;
-  animation: windBlow1 28s infinite linear;
 }
 
 #topCloud {
+  position: absolute;
+  top: 0;
+  animation: windBlow1 28s infinite linear;
+  z-index: 101;
   height: 12vh;
+  width: 100vw;
 }
 
 #topCloud2 {
+  position: absolute;
+  top: 0;
+  animation: windBlow3 28s infinite linear;
+  z-index: 101;
   height: 12vh;
+  width: 100vw;
 }
 
 @keyframes windBlow {
-  0%, 100% {
+  0% {
     transform: translateX(0);
   }
-  49%, 52% {
+
+  49% {
     opacity: 1;
   }
+
   50% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   51% {
     transform: translateX(-100vw);
     opacity: 0;
   }
-}
-@keyframes windBlow3, windBlow4 {
-  0%, 100% {
-    transform: translateX(-100vw);
-  }
-  74%, 77% {
+
+  52% {
     opacity: 1;
   }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes windBlow1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  49% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  51% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+
+  52% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes windBlow3 {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  74% {
+    opacity: 1;
+  }
+
   75% {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   76% {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
+  77% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100vw);
+  }
 }
+
+@keyframes windBlow2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  49% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  51% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+
+  52% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 #img-logo-main {
-  position: relative;
-  z-index: 100;
-  width: 7rem;
+  position: absolute;
+  width: 40rem;
+  top: -80px;
+  opacity: 0.5;
+}
+
+@keyframes windBlow4 {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  74% {
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  76% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+
+  77% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100vw);
+  }
 }
 
 #weatherAnimation {
@@ -265,30 +422,44 @@ h2:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 5;
   transform: translateX(50%, 50%);
   border: 1px solid black;
   background-color: transparent;
 }
 
 @keyframes flash {
-  0%, 100% {
+  0% {
     background-color: rgba(255, 182, 193, 0);
   }
-  10%, 90% {
-    background-color: rgba(255, 182, 193, 0.1);
+
+  50% {
+    background-color: rgba(255, 182, 193, 0.05);
+  }
+  100% {
+    background-color: rgba(255, 182, 193, 0);
   }
 }
+
 @keyframes fadeOut {
-  from {
-    opacity: 1;
+  0% {
+    opacity: 100%;
   }
-  to {
-    opacity: 0;
+
+  100% {
+    opacity: 0%;
   }
 }
+
+.language-button-container {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
 .glowing-button {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -297,17 +468,20 @@ h2:hover {
   border: 2px solid rgba(65, 220, 255, 0.797);
   position: relative;
   overflow: hidden;
-  z-index: 103;
+  z-index: 102;
   box-shadow: 0 0 15px rgba(65, 220, 255, 0.594);
+  transition: box-shadow 0.4s ease-in-out;
 }
+
 .glowing-button p {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   position: relative;
   z-index: 102;
 }
+
 .glowing-button::before {
   display: none;
-  content: "";
+  content: '';
   position: absolute;
   top: -175%;
   left: 20%;
@@ -318,56 +492,136 @@ h2:hover {
   transform: rotate(45deg);
   animation: animate 8s linear infinite;
 }
-.glowing-button:hover {
-  box-shadow: 0 0 45px rgba(65, 220, 255, 0.9);
-}
 
-.side-content-left, .side-content-right {
+.side-content-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   font-family: "SgaSmoothRegular";
+  font-size: 1rem;
+
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-}
+  padding-left: 0.8rem;
 
-.side-content-left {
-  padding-left: 1rem;
   left: 0;
 }
 
 .side-content-right {
-  padding-right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "SgaSmoothRegular";
+  font-size: 1rem;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding-right: 0.8rem;
+
   right: 0;
 }
 
+.side-content-left-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "SgaSmoothRegular";
+  font-size: 1rem;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 0.8rem;
+}
+
+.side-content-right-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "SgaSmoothRegular";
+  font-size: 1rem;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-right: 0.8rem;
+}
+
+.runes-transition-2:hover .neon-runes-text-2 {
+  opacity: 0;
+}
+
+.neon-runes-text-2 {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.neon-runes-text {
+  color: #fff;
+  /* Білий колір тексту */
+  text-shadow:
+    0 0 5px rgba(255, 255, 0, 0.8),
+    /* Легка зовнішня тінь */
+    0 0 10px rgba(255, 255, 0, 0.6),
+    /* Помірна тінь */
+    0 0 15px rgba(255, 255, 0, 0.4);
+  /* Розсіяне світіння */
+  transition: text-shadow 0.3s ease;
+  /* Плавний перехід для ефекту */
+}
+
+.runes-transition-1:hover .neon-runes-text {
+  text-shadow:
+    0 0 10px rgba(255, 255, 0, 1),
+    /* Посилене світіння */
+    0 0 20px rgba(255, 255, 0, 0.8),
+    0 0 30px rgba(255, 255, 0, 0.6);
+}
+
+
+.glowing-button:hover {
+  box-shadow: 0 0 45px rgba(65, 220, 255, 0.9);
+}
+
 @keyframes animate {
-  0%, 100% {
+  0% {
     transform: rotate(45deg) translate(0, 0);
   }
+
   50% {
     transform: rotate(45deg) translate(50%, 50%);
   }
+
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
 }
+
 @media screen and (max-width: 680px) {
   .grid-container1 {
     display: flex;
-    flex-direction: column;
     gap: 2vh;
+    flex-direction: column;
   }
+
   .glowing-button {
     height: 48px;
     font-size: 1em;
     padding-bottom: 0.5rem;
   }
+
   h2 {
-    width: 65vw;
+    display: none;
+  }
+
+  h1 {
+    margin: 40px;
+  }
+  .neon-runes-text {
+    display: none;
   }
 }
-@media screen and (max-width: 400px) {
-  h2 {
-    width: 100vw;
-  }
-}/*# sourceMappingURL=styles.css.map */
