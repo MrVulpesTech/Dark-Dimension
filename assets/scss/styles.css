@@ -26,19 +26,7 @@ body {
   font-family: "MinecraftTen", sans-serif;
 }
 
-a svg g g {
-  fill: #000000;
-}
 
-a:hover {
-  transition: 0.5s ease-in-out;
-  color: #FFFFFF !important;
-}
-
-a:hover svg g g {
-  transition: 0.5s ease-in-out;
-  fill: white;
-}
 
 .custom-cursor,
 .custom-cursor a,
@@ -126,12 +114,13 @@ h2:hover {
 }
 
 .button-profile {
+  z-index: 105; /*теж костиль, теж не чіпать!!!*/
   font-size: 1.2rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  text-wrap: nowrap;
-  align-items: center;
+  white-space: nowrap;
+  align-items: center;  
 }
 
 .button-profile svg {
@@ -141,10 +130,20 @@ h2:hover {
 .button-profile span {
   text-align: center;
 }
-.button-profile:hover {
-  color: aqua;
+
+a svg g g {
+  fill: #000000;
 }
 
+a:hover {
+  transition: 0.5s ease-in-out;
+  color: #FFFFFF
+}
+
+a:hover svg g g {
+  transition: 0.5s ease-in-out;
+  fill: white;
+}
 .container1_additional-border {
   border-left: 1rem solid #fabb9f;
   border-right: 1rem solid #fabb9f;
@@ -452,6 +451,7 @@ h2:hover {
 }
 
 .language-button-container {
+  z-index: 105;           /*костиль, не чіпать!!! */
   display: flex;
   align-items: center;
   padding-left: 1rem;

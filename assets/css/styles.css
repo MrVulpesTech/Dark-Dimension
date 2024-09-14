@@ -23,20 +23,6 @@ body {
   font-family: "MinecraftTen", sans-serif;
 }
 
-a svg g g {
-  fill: #000000;
-}
-
-a:hover {
-  transition: 0.5s ease-in-out;
-  color: #FFFFFF !important;
-}
-
-a:hover svg g g {
-  transition: 0.5s ease-in-out;
-  fill: white;
-}
-
 .custom-cursor,
 .custom-cursor a,
 .custom-cursor button,

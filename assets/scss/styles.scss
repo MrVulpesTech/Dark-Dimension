@@ -24,20 +24,6 @@ body {
     font-family: 'MinecraftTen', sans-serif;
 }
 
-a svg g g {
-    fill: #000000;
-}
-
-a:hover {
-    transition: 0.5s ease-in-out;
-    color: #FFFFFF !important;
-}
-
-a:hover svg g g {
-    transition: 0.5s ease-in-out;
-    fill: white;
-}
-
 
 .custom-cursor,
 .custom-cursor a,
@@ -130,22 +116,6 @@ h2 {
     background-color: #fabb9f;
 }
 
-.button-profile {
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    text-wrap: nowrap;
-    align-items: center;
-
-    svg {
-        height: 70%;
-    }
-
-    span {
-        text-align: center;
-    }
-}
 
 .container1_additional-border {
     border-left: 1rem solid #fabb9f;

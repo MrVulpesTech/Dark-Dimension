@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const height = 600;
 
 const maxTimeBetweenLightning = 20; // Reduced to increase frequency
-const maxLightningPaths = 100;
+const maxLightningPaths = 55;
 const maxLightningThickness = 3;
 const startingDistance = 30;
 const maxBranches = 5;
@@ -50,7 +50,7 @@ function makeLightning(ctx, startingX, startingY, branches) {
                 totalTime += time;
             }
         }, timeout);
-        speed /= 1.8;
+        speed /= 2;
         timeout += speed;
     }
     return timeout + totalTime;
