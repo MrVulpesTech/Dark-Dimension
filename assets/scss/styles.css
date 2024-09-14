@@ -81,6 +81,19 @@ section.main-page-section {
   }
 }
 
+
+.just_rain::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bf4d68fb166d4adf291221e42fb94edc.png");
+  animation: rain 0.19s ease-in infinite;
+  z-index: 90;
+}
+
 h1 span {
   display: none;
 }
@@ -180,6 +193,25 @@ a:hover svg g g {
   will-change: transform, opacity; /* Оптимізація для плавних змін */
 }
 
+.container_register {
+  background-image: url("../images/artwork_screen2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 40%;
+  height: 60%;
+  overflow: hidden;
+  border: 2px ridge black;
+  z-index: 80;
+}
+.register_block {
+  z-index: 100;
+
+label{
+  font-size: 1.25rem;
+} 
+
+}
 .glass-background {
   background: rgba(0, 0, 0, 0.5);
   /* Напівпрозорий чорний фон */
