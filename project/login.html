@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/scss/styles.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+
+    <section id="weatherAnimation" class="main-page-section">
+        <img id="topCloud" src="../assets/images/Illustrative_Albedo_Digital_artwork_featuring_a_surreal_and_fa_01.png"
+            alt="top cloud">
+        <img id="topCloud2" src="../assets/images/Illustrative_Albedo_Digital_artwork_featuring_a_surreal_and_fa_02.png"
+            alt="top cloud">
+
+        <h1 style="margin-top: -200px;"><span>Dark Dimension</span><img src="../assets/images/DarkDimension.png" alt=""
+                class="img-dark-dimension"></h1>
+
+        <div class="container_register flex flex-col items-center">
+
+            <h2 class="text-1xl font-bold mb-6 text-center">Login to Your Account</h2>
+
+            <form action="/login" method="POST" class="space-y-4">
+                <div class="login_block">
+                    <label for="username" class="block text-sm font-medium text-white">Username</label>
+                    <input type="text" id="username" name="username" required
+                        class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div class="login_block">
+                    <label for="password" class="block text-sm font-medium text-white">Password</label>
+                    <input type="password" id="password" name="password" required
+                        class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+
+                <div class="flex items-center justify-between" style="z-index:100;">
+                    <button type="submit"
+                        class="w-full px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+            <p class="mt-6 text-sm text-white text-center" style="position: relative;">
+                Don't have an account? <a href="register.html" class="text-indigo-600 hover:underline">Create one</a>.
+            </p>
+        </div>
+
+        <img id="bottomCloud" src="../assets/images/Graphic_Design_Digital_artwork_featuring_a_surreal_and_fantast_01.png"
+            alt="bottom cloud">
+        <img id="bottomCloud2" src="../assets/images/Graphic_Design_Digital_artwork_featuring_a_surreal_and_fantast_02.png"
+            alt="bottom cloud">
+    </section>
+
+</body>
+
+</html>
