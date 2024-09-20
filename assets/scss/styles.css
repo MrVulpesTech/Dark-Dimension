@@ -204,6 +204,18 @@ a:hover svg g g {
   border: 2px ridge black;
   z-index: 80;
 }
+
+.container2 {
+  background-image: url("../images/artwork_screen2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px ridge black;
+  z-index: 80;
+}
 .register_block {
   z-index: 100;
 

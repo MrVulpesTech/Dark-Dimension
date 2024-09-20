@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/scss/styles.css">
+    <script src="./js/main.js" defer></script>
+    <style>
+        #newTopicForm {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="forumSection" class="main-page-section">
+        <img id="topCloud" src="../../assets/images/Illustrative_Albedo_Digital_artwork_featuring_a_surreal_and_fa_01.png"
+            alt="top cloud">
+        <img id="topCloud2" src="../../assets/images/Illustrative_Albedo_Digital_artwork_featuring_a_surreal_and_fa_02.png"
+            alt="top cloud">
+
+        <h1 style="margin-top: -200px;"><span>Dark Dimension Forum</span>
+            <img src="../../assets/images/DarkDimension.png" alt="" class="img-dark-dimension">
+        </h1>
+
+        <div class="container_forum flex flex-col items-center">
+            <div class="w-full max-w-4xl bg-gray-800 rounded-lg p-6 mb-6">
+        <!-- Button to Show Form -->
+        <button id="showFormButton"
+            class="w-full max-w-4xl px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Create New Topic
+        </button>
+            <!-- List of Topics -->
+
+            <div class="w-full max-w-4xl bg-gray-800 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-white mb-4">Recent Topics</h3>
+                <div class="space-y-4">
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <a href="/forum/topic/1" class="text-lg font-semibold text-indigo-500 hover:underline">New1</a>
+                        <p class="text-sm text-gray-400">Posted by User123 - 10 replies</p>
+                    </div>
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <a href="/forum/topic/2" class="text-lg font-semibold text-indigo-500 hover:underline">New2</a>
+                        <p class="text-sm text-gray-400">Posted by User321 - 5 replies</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Create New Topic Form -->
+            <div id="newTopicForm" class="w-full max-w-4xl bg-gray-800 rounded-lg p-6 mt-6">
+                <h3 class="text-xl font-bold text-white mb-4">Create a New Topic</h3>
+                <form action="/forum/new-topic" method="POST" class="space-y-4">
+                    <div class="forum_block">
+                        <label for="topic_title" class="block text-sm font-medium text-white">Topic Title</label>
+                        <input type="text" id="topic_title" name="topic_title" required
+                            class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+
+                    <div class="forum_block">
+                        <label for="topic_description" class="block text-sm font-medium text-white">Description</label>
+                        <textarea id="topic_description" name="topic_description" rows="4" required
+                            class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <button type="submit"
+                            class="w-full px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            Create Topic
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <img id="bottomCloud"
+            src="../../assets/images/Graphic_Design_Digital_artwork_featuring_a_surreal_and_fantast_01.png"
+            alt="bottom cloud">
+        <img id="bottomCloud2"
+            src="../../assets/images/Graphic_Design_Digital_artwork_featuring_a_surreal_and_fantast_02.png"
+            alt="bottom cloud">
+    </section>
+
+
+</body>
+
+</html>

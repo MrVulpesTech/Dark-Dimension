@@ -105,7 +105,44 @@ function createCanvasAndLightning() {
         setTimeout(createCanvasAndLightning, 5000); // 2 секунди між блискавками
     }, time * 2); // Після анімації почекайте вдвічі більше часу для повного циклу
 }
+document.getElementById("showFormButton").addEventListener("click", function () {
+    var form = document.getElementById("newTopicForm");
+    var button = document.getElementById("showFormButton");
+    if (form.style.display === "none" || form.style.display === "") {
+        form.style.display = "block";
+        button.style.display = "none"; // Приховуємо кнопку
+    }
+});
 
+document.getElementById('new-topic-btn').addEventListener('click', function() {
+    document.getElementById('new-topic-form').style.display = 'block';
+  });
+  
+  document.getElementById('create-topic-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+  
+    // Відправка даних на бекенд для створення нової теми
+    fetch('/api/create-topic', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ title, description }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Додати нову тему до списку
+        const newTopic = document.createElement('li');
+        newTopic.innerHTML = `<a href="/topic/${data.id}">${data.title}</a>`;
+        document.querySelector('.forum-topics ul').appendChild(newTopic);
+        document.getElementById('new-topic-form').style.display = 'none';
+      }
+    });
+  });
 createCanvasAndLightning();
 
 });

@@ -449,6 +449,7 @@ h2:hover {
   box-shadow: 0 0 45px rgba(65, 220, 255, 0.9);
 }
 
+
 @keyframes animate {
   0% {
     transform: rotate(45deg) translate(0, 0);
